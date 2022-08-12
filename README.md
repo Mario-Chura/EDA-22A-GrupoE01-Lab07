@@ -27,12 +27,12 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Estructura de Datos y Algoritmos</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Arbol B</td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Hashing</td></tr>
 <tr>
-<td>NÚMERO DE PRÁCTICA:</td><td>06</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+<td>NÚMERO DE PRÁCTICA:</td><td>07</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
 </tr>
 <tr>
-<td>FECHA DE PRESENTACIÓN:</td><td>07/08/2022</td><td>HORA DE PRESENTACIÓN: 11:55 pm</td><td colspan="3"></td>
+<td>FECHA DE PRESENTACIÓN:</td><td>14/08/2022</td><td>HORA DE PRESENTACIÓN: 11:55 pm</td><td colspan="3"></td>
 </tr>
 <tr><td colspan="3">INTEGRANTE(s):
 <ul>
@@ -59,17 +59,11 @@
 
 ### I.	SOLUCIÓN DE EJERCICIOS/PROBLEMAS
 #	
-1.  Ejercicio 1 : Modificar el método de obtención de valor dado una clave (5 puntos)
-	- Procedimiento
-2.  Ejercicio 2 : Mostrar en un diagrama de árbol gráficamente la estructura final para los datos
-ingresados. (4 puntos)
-	- Procedimiento
-3.  Ejercicio 3 : El método toString() del árbol, retorna lo siguiente. ¿Por qué están entre paréntesis
-ciertas claves? (4 puntos)
-	- Procedimiento
-4.  Ejercicio 4 : Agregar un nodo adicional (www.youtube.com, 134.24.13.78) y mostrarlo paso a
-paso. (3 puntos)
-	- Procedimiento
+1.  Implementar una tabla hash en base a los métodos definidos en la interfaz del archivo HashTable.java
+	- Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
+	- Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal.
+	- Es posible agregar otros métodos que les ayuden a su resolución.
+	- Crear un archivo de test donde incluyen casos de prueba.
 	
    
 #
@@ -91,7 +85,7 @@ paso. (3 puntos)
 
 <div align="center"><h2> REFERENCIAS Y BIBLIOGRAFÍA </h2></div> <br>
 
--   1
--   2
+-   https://sites.google.com/a/espe.edu.ec/programacion-ii/home/tablas-hash
+-   https://www.geeksforgeeks.org/hashtable-in-java/
 -   3
 -   4
