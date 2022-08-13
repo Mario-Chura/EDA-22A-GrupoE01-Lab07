@@ -87,5 +87,27 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
         return null;
     }
 
+    /*
+     * Asocia el valor especificado con la clave especificada a la tabla hash
+     * Si la tabla tiene un registro previo para la clave,
+     * el valor viejo es reemplazado por el nuevo valor ingresado. 
+    */
+    public void put(K key, V value) {
+        if(key != null) {
+            int index = functionHash(Math.abs(key.hashCode()));         
+            LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valores[index];
+            if (listInPosition != null) { //Para verificar que la posicion este inicializada
+                listInPosition.push(new Nodo<>(key, value));
+            } else { //De otro modo, se inicializa la posicion
+                LinkedList<Nodo<K, V>> addListInPosition = new LinkedList<Nodo<K, V>>();
+                addListInPosition.push(new Nodo<>(key, value));
+                valores[index] = addListInPosition;
+            }
+            size++;
+
+        }else {
+            throw new NullPointerException();
+        }
+    }
     
 }
