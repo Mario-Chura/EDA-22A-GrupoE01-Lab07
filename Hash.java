@@ -47,5 +47,45 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
         }
     }
 
+    //Retorna true. Si la tabla contiene uno o mas registros asociados a cierto valor especificado.
+    public boolean containsValue(V value) {
+        for (Object valor : valores) {
+            if (valor != null) {
+                LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valor;
+                for (Nodo<K, V> aux : listInPosition) {
+                    //System.out.println(aux.getValue());
+                    if(value.equals(aux.getValue())){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    //Retorna el valor el cual corresponde a la clave o null si la tabla no contiene el registro para la clave.
+    public V get(K key) {
+        if(key != null){
+            int index = functionHash(key.hashCode());            
+            LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valores[index];
+
+            if(listInPosition != null) {               
+                for (Nodo<K, V> aux : listInPosition) {                    
+                    if (key.equals(aux.getKey())) {
+                        return aux.getValue();
+                    } else {
+                        return null;
+                    }
+                }
+            }else {
+                return null;
+            }
+
+        }else {
+            throw new NullPointerException();
+        }
+        return null;
+    }
+
     
 }
