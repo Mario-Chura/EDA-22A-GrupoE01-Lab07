@@ -46,7 +46,7 @@ public interface HashTable <K extends String,V extends Integer>{
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer get(String key);
+    V get(K key);
 
 
     /**
@@ -62,7 +62,7 @@ public interface HashTable <K extends String,V extends Integer>{
      * @throws NullPointerException si la clave o valor son nulos
      * @throws ErrorException para otros tipos de error
      */
-    Integer put(String key, Integer value);
+    void put(K key, V value);
 
     /**
      * Elimina el registro de una clave, si la clave existe 
@@ -74,7 +74,7 @@ public interface HashTable <K extends String,V extends Integer>{
      * @throws NullPointerException si la clave es nula
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer remove(Object key);
+    V remove(Object key);
 
     /**
      * Elimina todos los registros de la tabla hash
