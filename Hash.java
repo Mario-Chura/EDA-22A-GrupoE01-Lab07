@@ -144,7 +144,7 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
         }
     }
 
-    //Retorna todos los elementos de la tabla hash.
+    //Retorna el codigo hash para TODA la tabla hash. 
     public int hashCode() {
         int result = 1;
         if( !this.isEmpty() ) {
@@ -163,6 +163,28 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
             result = result * (((valores == null))? 0 : Arrays.hashCode(valores));
             return result;
         }
+    }
+
+    //Retorna todos los elementos de la tabla hash.
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("HashAbierto = {\n");
+        sb.append("\tsize=").append(size).append("\n");
+        sb.append("\tlenght=").append(lenght).append("\n");;
+        sb.append("\thashCode=").append(this.hashCode()).append("\n");
+        sb.append("\telements = {").append("\n");
+        for(Object valor : this.valores){
+            if(valor != null) {
+                LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valor;
+                if (!listInPosition.isEmpty()) {
+                    sb.append("\t\t").append(valor.toString()).append("\n");
+                }
+            }
+        }
+        sb.append("\t}").append("\n");
+        sb.append("}").append("\n");
+
+        return sb.toString();
     }
     
 }
