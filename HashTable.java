@@ -1,6 +1,6 @@
-package Propuestos;
 
-public interface HashTable{
+
+public interface HashTable <K extends String,V extends Integer>{
     /**
      * Retorna el numero de clave-valor registrado en la tabla hash.
      *
@@ -24,7 +24,7 @@ public interface HashTable{
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    boolean containsKey(Object key);
+    boolean containsKey(K key);
 
     /**
      * Returns {@code true} Si la tabla contiene uno o mas registros asociados a   
@@ -35,7 +35,7 @@ public interface HashTable{
      * @throws NullPointerException si el valor es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    boolean containsValue(Object value);
+    boolean containsValue(V value);
 
     /**
      * Retorna el valor el cual corresponde a la clave o 
