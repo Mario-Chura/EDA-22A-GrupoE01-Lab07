@@ -17,6 +17,12 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
         valores = new LinkedList[this.lenght];
     }
 
+    // Retorna el index para el vector de valores HashAbierto
+  
+    private int functionHash(int hashCode) {
+        return (hashCode+1) % lenght;
+    }
+    
     @Override
     public int size() {
         return size;
