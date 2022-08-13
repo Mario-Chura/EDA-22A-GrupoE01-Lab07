@@ -143,5 +143,26 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
             this.size = 0;
         }
     }
+
+    //Retorna todos los elementos de la tabla hash.
+    public int hashCode() {
+        int result = 1;
+        if( !this.isEmpty() ) {
+            for (Object valor : valores) {
+                if(valor != null) {
+                    LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valor;
+                    if(! listInPosition.isEmpty()) {
+                        result = result + listInPosition.getFirst().getKey().hashCode();
+                    }
+                }
+            }
+            return result;
+        }else {
+            result = result * 17 + lenght;
+            result = result * 31 + size;
+            result = result * (((valores == null))? 0 : Arrays.hashCode(valores));
+            return result;
+        }
+    }
     
 }
