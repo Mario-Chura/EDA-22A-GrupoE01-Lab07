@@ -26,5 +26,13 @@ public class Nodo<K, V> {
   public void setValue(V value) {
       this.value = value;
   }
+  public boolean equals(Nodo<K, V> obj) {
+      return false;
+  }
+
+  @Override
+  public String toString() {
+      return "<" + "key=" + key +", value=" + value + '>';
+  }
 
 }
