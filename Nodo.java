@@ -12,6 +12,12 @@ public class Nodo<K, V> {
   }
   
   //Setter y Getter
-  
+  public K getKey() {
+      return key;
+  }
+
+  public void setKey(K key) {
+      this.key = key;
+  }  
 
 }
