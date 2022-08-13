@@ -58,13 +58,46 @@
 <div align="center"><h2> SOLUCIÓN Y RESULTADOS </h2></div>
 
 ### I.	SOLUCIÓN DE EJERCICIOS/PROBLEMAS
-#	
+#
+La estrutura del presente laboratorio es la siguiente:
+
+   
+
+   ```sh
+
+	    ├── EDA-22A-GrupoE01-Lab07
+	        ├── Ejercicio_1
+	        ├── HashTable.java
+	        ├── Nodo.java
+	        ├── Hash.java
+	        ├── Test1.java
+	        ├── Test2.java
+	        └── Readme
+
+   ```
+   
+   - En los archivos Test1 y Test2 se estará probando el código implementado.
+   
 1.  Implementar una tabla hash en base a los métodos definidos en la interfaz del archivo HashTable.java
 	- Deben contemplar como mínimo el desarrollo de todos los métodos en su clase
 	- Deben manejar las colisiones por Encadenamiento (Lista enlazada) y Sondeo Lineal.
 	- Es posible agregar otros métodos que les ayuden a su resolución.
 	- Crear un archivo de test donde incluyen casos de prueba.
-	
+
+- Primero se creo la clase 'Node.java' la cual guardara una clave y un valor
+
+	```py
+			public class Nodo<K, V> {
+			    K key;
+			    V value;
+
+			    public Nodo(K key, V value) {
+			        this.key = key;
+			        this.value = value;
+			    }
+			}
+			
+      ```	
    
 #
 
