@@ -109,5 +109,30 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
             throw new NullPointerException();
         }
     }
-    
+
+    //Elimina el registro de una clave, si la clave existe o null si no existe un registro para la clave.
+    public V remove(Object key) {
+        if(key != null){
+            int index = functionHash(key.hashCode());
+        
+            LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valores[index];
+
+            if(listInPosition != null) {
+                
+                for (Nodo<K, V> aux : listInPosition) {
+                    if (key.equals(aux.getKey())) {
+                        listInPosition.remove(aux);
+                        size--;
+                        return aux.getValue();
+                    }
+                }
+                return null;
+            }else {
+                return null;
+            }
+
+        }else {
+            throw new NullPointerException();
+        }
+    }
 }
