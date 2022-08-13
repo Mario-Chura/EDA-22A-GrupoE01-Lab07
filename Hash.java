@@ -135,4 +135,13 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
             throw new NullPointerException();
         }
     }
+
+    //Elimina todos los registros de la tabla hash
+    public void clear() {
+        for (Object valor : valores) {
+            valor = null;
+            this.size = 0;
+        }
+    }
+    
 }
