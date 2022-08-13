@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Hash <K extends String, V extends Integer> implements HashTable<K, V>{
-    // Atributos
+    // Atributos 
     private final Object[] valores;
     private int size;
     private final int lenght;
@@ -17,4 +17,13 @@ public class Hash <K extends String, V extends Integer> implements HashTable<K, 
         valores = new LinkedList[this.lenght];
     }
 
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
 }
