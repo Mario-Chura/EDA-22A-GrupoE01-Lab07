@@ -84,9 +84,9 @@ La estrutura del presente laboratorio es la siguiente:
 	- Es posible agregar otros métodos que les ayuden a su resolución.
 	- Crear un archivo de test donde incluyen casos de prueba.
 
-- Primero se creo la clase 'Node.java' la cual guardara una clave y un valor
+- Primero se creo la clase 'Node.java' la cual guardara una clave y un valor; ademas se agregaron los metodos setter y getters 
 
-	```py
+```py
 			public class Nodo<K, V> {
 			    K key;
 			    V value;
@@ -97,7 +97,7 @@ La estrutura del presente laboratorio es la siguiente:
 			    }
 			}
 			
-      ```	
+   ```	
    
 #
 
