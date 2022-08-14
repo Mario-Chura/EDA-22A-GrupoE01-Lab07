@@ -28,6 +28,15 @@ public class Test1 {
         hash.put("pewb", 55);
         hash.put("pwba", 65);
 
+        System.out.println(hash);
+        System.out.println("Tamaño de la tabla hash =======> "+hash.size());
+        System.out.println();
+        System.out.println("¿Remueve el clave='pdweb'? =======> " + hash.remove("pdweb"));
+        System.out.println(hash);
+        System.out.println("Tamaño de la tabla hash =======> "+hash.size());
+        System.out.println("\n=====Recuperando clave 'pweb'========> " + hash.get("pweb")); 
+        System.out.println(hash.size());
+
 
     }
 }
