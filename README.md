@@ -213,12 +213,12 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
 #
 
 ### III.	CONCLUSIONES
-#
--Conclusion 1 <br>
--Conclusion 2 <br>
--Conclusion 3 <br>
--Conclusion 4 <br>
--Conclusion 5 <br>
+# 
+- El uso de la estructura Hash, nos permite resolver problemas con estructuras de simbolos porque permite la insecion y operaciones de Busqueda. Asimismo otro aplicacion de hash muy usada es en los videojuegos donde se requiere de un registro de las posiciones del jugador, usando esta estructura se logra guardar la posicion y mediante una funcion Hash almacenar su movimiento en una posicion, evitando problemas de que se repita una posicion ya ocupada. Es por estas y otras aplicaciones que es importante el estudio y practica de la Estructura Hash<br>  
+- Conclusion 2 <br>
+- Conclusion 3 <br>
+- Conclusion 4 <br>
+- Conclusion 5 <br>
 #
 <div align="center"><h2>  RETROALIMENTACIÓN GENERAL </h2></div> <br>
 
