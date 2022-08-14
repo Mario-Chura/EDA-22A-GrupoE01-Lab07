@@ -18,6 +18,15 @@ public class Test1 {
         System.out.println("¿Se encuentra la clave='eda'? ======> " + hash.containsKey("eda"));
         System.out.println("¿Se encuentra el valor='15'? =======> " + hash.containsKey("eda"));
         System.out.println("¿Se encuentra el valor='25'? =======> " + hash.containsValue(25));
+        hash.put("edo", 25);
+        hash.put("pweb", 29);
+        hash.put("pdweb", 23);
+        hash.put("pwrb", 55);
+        hash.put("pwb", 65);
+        hash.put("pwed", 55);
+        hash.put("pwc", 65);
+        hash.put("pewb", 55);
+        hash.put("pwba", 65);
 
 
     }
