@@ -48,4 +48,11 @@ public class Test2 {
 		}
 		return value;
 	}
+
+	public static void agregar() {
+		String key = ingresarClave();
+		int value = ingresarNumero("Ingresa el valor (entero)");
+		hash.put(key, value);
+		System.out.println("<"+ key +", " + value+ "> Si fue agregado" );
+	}
 }
