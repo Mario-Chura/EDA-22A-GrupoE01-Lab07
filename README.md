@@ -108,16 +108,16 @@ La estrutura del presente laboratorio es la siguiente:
 		```
 	- Como atributos, cuenta con un arreglo de Objetos, un entero **size** para contabilizar los registros en la *tabla Hash*, y un entero final *length* para el tamaño de la *tablaHash*
 		```py
-		    // Atributos 
-    		private final Object[] valores;
-    		private int size; 
-    		private final int lenght;
+		// Atributos 
+    	private final Object[] valores;
+    	private int size; 
+    	private final int lenght;
 		```
 	- En el constructor recibe como parametro, el tamaño de *TablaHash*, se asigna el valor al atributo *lenght* y se inicializa el arreglo *valores* con el valor de *lenght*	
 		```py
 		public Hash(int lenght) {
-        		this.lenght = lenght;
-        		valores = new LinkedList[this.lenght];
+            this.lenght = lenght;
+            valores = new LinkedList[this.lenght];
     	}
 		```
 	- Asimismo se implemento un constructor de referencia *this()*
@@ -133,10 +133,10 @@ La estrutura del presente laboratorio es la siguiente:
 		int index = functionHash(key.hashCode()); //index de la key ingresada
         LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valores[index];
             	if(listInPosition == null) {
-                	return false; //retorna false si la tabla no contiene la clave determinada
+                    return false; //retorna false si la tabla no contiene la clave determinada
             	}else {
-                return !listInPosition.isEmpty();
-            }
+                    return !listInPosition.isEmpty();
+               }
 		```
 	- Si la *key* ingresada es null, se mostrara la debida Excepcion 
 	- El metodo **containsValue**, se encarga de retornar true. Si la tabla contiene uno o mas registros asociados a cierto valor especificado.
@@ -144,10 +144,10 @@ La estrutura del presente laboratorio es la siguiente:
 		```py
 		 LinkedList<Nodo<K, V>> listInPosition = (LinkedList<Nodo<K, V>>) valor;
          for (Nodo<K, V> aux : listInPosition) {                   
-                    if(value.equals(aux.getValue())){
-                        return true;
-                    }
-                }
+             if(value.equals(aux.getValue())){
+                return true;
+              }
+         }
 		```
 	- El metodo **get**, se encarga de retornar el valor el cual corresponde a la clave o null si la tabla no contiene el registro para la clave.
 	- Se realiza lo mismo que en anteriores metodos, obteniendo el index con *functionHash* y asignando en *listInPosition*
@@ -170,7 +170,7 @@ La estrutura del presente laboratorio es la siguiente:
               addListInPosition.push(new Nodo<>(key, value));
               valores[index] = addListInPosition;
         }
-            size++;
+         size++;
 		```
 	- El metodo **remove** se encarga de eliminar el registro de una clave, si la clave existe de otro modo null si no existe un registro para la clave.
 	- Se sigue los mismos pasos que en los metodos anteriores, para despues dentro de un *forEach* realizar un condicional con la *key* ingresada y la *key* de la lista. Si se cumple su igualdad se realiza la operacion **remove**, se disminuye en uno el valor de *size* y se retorna el valor *Value* removido
