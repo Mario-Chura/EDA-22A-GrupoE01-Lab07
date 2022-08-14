@@ -226,5 +226,5 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
 
 -   https://sites.google.com/a/espe.edu.ec/programacion-ii/home/tablas-hash
 -   https://www.geeksforgeeks.org/hashtable-in-java/
--   3
+-   Weiss, M.A.(1998). Data structures and problem solving using Java. Obtenido de https://drive.google.com/file/d/1qHBLI76NkcFd_zOmN_8wUY09mH48wqcU/view
 -   4
