@@ -99,4 +99,30 @@ public class Test2 {
 		System.out.println("La tabla " + rpta +" contiene el valor: "+valor);
 	}
 
+	public static void contieneValor() {
+		int seleccion = 0;
+		System.out.println("\nEscoge una opcion");
+		while(seleccion != -1) {
+			System.out.println("\t1. ¿Contiene la clave?");
+			System.out.println("\t2. ¿Contiene el valor?");
+			System.out.println("\t3. Atras");
+			seleccion = ingresarNumero("Ingresa una opcion: ");
+
+			switch(seleccion) {
+			case 1:
+				buscarClave();
+				break;
+			case 2:
+				buscarValor();
+				break;
+			case 3:
+				seleccion = -1;
+				break;
+			default:
+				System.out.println("\nEscoge una opcion de la lista:");
+				break;
+			}
+		}
+	}
+
 }
