@@ -5,4 +5,15 @@ public class Test2 {
 	private static final int size = 11;
 	static Hash<String, Integer> hash = new Hash<>(size);
 	static Scanner scan = new Scanner(System.in); 
+
+    public static void Menu() {
+		StringBuilder str = new StringBuilder();
+		str.append("\n1. Agregar entrada a la tabla\n");
+		str.append("2. Borrar entrada de la tabla\n");
+		str.append("3. Mostrar informacion de la tabla\n");
+		str.append("4. Contiene clave/valor\n");
+		str.append("5. Salir");
+
+		System.out.println(str.toString());
+	}
 }
