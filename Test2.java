@@ -32,4 +32,20 @@ public class Test2 {
 		}
 		return key;
 	}
+	public static int ingresarNumero(String label) {
+		int value = 0;
+		while(true) {
+			System.out.print(label + ": ");
+			try {
+				value = scan.nextInt();
+			}catch (Exception e) {
+				System.err.println(e);
+				scan.nextLine();
+			}
+			if(value != 0){
+				break;
+			}
+		}
+		return value;
+	}
 }
