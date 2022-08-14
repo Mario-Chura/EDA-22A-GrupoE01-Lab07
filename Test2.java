@@ -55,4 +55,19 @@ public class Test2 {
 		hash.put(key, value);
 		System.out.println("<"+ key +", " + value+ "> Si fue agregado" );
 	}
+
+	public static void borrar() {
+		String key = ingresarClave();
+		Object a = null;
+		try {
+			a = hash.remove(key);
+		}catch (Exception e){
+			System.err.println(e);
+		}
+		if(a == null) {
+			System.out.println("No se realizo borrado");
+		}else{
+			System.out.println("La entrada <" + key +", "+ a +"> se borro de la tabla");
+		}
+	}
 }
