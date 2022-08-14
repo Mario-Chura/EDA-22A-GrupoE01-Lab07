@@ -215,7 +215,7 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
 ### III.	CONCLUSIONES
 # 
 - El uso de la estructura Hash, nos permite resolver problemas con estructuras de simbolos porque permite la insecion y operaciones de Busqueda. Asimismo otro aplicacion de hash muy usada es en los videojuegos donde se requiere de un registro de las posiciones del jugador, usando esta estructura se logra guardar la posicion y mediante una funcion Hash almacenar su movimiento en una posicion, evitando problemas de que se repita una posicion ya ocupada. Es por estas y otras aplicaciones que es importante el estudio y practica de la Estructura Hash<br>  
-- Conclusion 2 <br>
+- Una tabla hash tiene como principal ventaja que el acceso a los datos suele ser muy rápido si su razón de ocupación no es muy elevada porque si la ocupación es elevada se producen varias colisiones y la tabla se vuelve muy ineficiente, es por ello que debemos implementar una función que distribuya uniformemente las claves.  <br>
 - Conclusion 3 <br>
 - Conclusion 4 <br>
 - Conclusion 5 <br>
