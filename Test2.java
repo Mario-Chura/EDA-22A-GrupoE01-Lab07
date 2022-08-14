@@ -86,4 +86,17 @@ public class Test2 {
 
 		System.out.println("La tabla " + rpta +" contiene la clave: "+key);
 	}
+
+	public static void buscarValor() {
+		int valor = ingresarNumero("Ingresa el valor a buscar (entero): ");
+		String rpta = "";
+
+		if(hash.containsValue(valor))
+			rpta = "SI";
+		else
+			rpta = "NO";
+
+		System.out.println("La tabla " + rpta +" contiene el valor: "+valor);
+	}
+
 }
