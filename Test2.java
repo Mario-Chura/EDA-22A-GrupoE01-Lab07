@@ -70,4 +70,20 @@ public class Test2 {
 			System.out.println("La entrada <" + key +", "+ a +"> se borro de la tabla");
 		}
 	}
+
+	public static void mostrar() {
+		System.out.println(hash);
+	}
+
+	public static void buscarClave() {
+		String key = ingresarClave();
+		String rpta = "";
+
+		if(hash.containsKey(key))
+			rpta = "SI";
+		else
+			rpta = "NO";
+
+		System.out.println("La tabla " + rpta +" contiene la clave: "+key);
+	}
 }
