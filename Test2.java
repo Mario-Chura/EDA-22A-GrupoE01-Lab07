@@ -16,4 +16,20 @@ public class Test2 {
 
 		System.out.println(str.toString());
 	}
+	public static String ingresarClave() {
+		String key = "";
+		while(true) {
+			System.out.print("\nIngresa la clave: ");
+			try {
+				key = scan.next();
+			}catch (Exception e) {
+				System.err.println(e);
+				scan.nextLine();
+			}
+			if(!key.equals("")){
+				break;
+			}
+		}
+		return key;
+	}
 }
