@@ -6,6 +6,50 @@ public class Test2 {
 	static Hash<String, Integer> hash = new Hash<>(size);
 	static Scanner scan = new Scanner(System.in); 
 
+    public static void main(String[] args) {
+		int seleccion = 0;
+		System.out.println("=====> MENU PRINCIPAL <=====edo");
+		while(true) {
+			if (seleccion == -1){
+				System.out.println("\nEscoge una opcion:");
+			}
+			Menu();
+			System.out.print("Escoge una opcion: ");
+			seleccion = 0;
+			try {
+				seleccion = scan.nextInt();
+			}catch (InputMismatchException e){
+				System.err.println(e);
+				scan.nextLine();
+			}
+
+			switch (seleccion) {
+			case 0:
+				seleccion = -1;
+				break;
+			case 1:
+				agregar();
+				break;
+			case 2:
+				borrar();
+				break;
+			case 3:
+				mostrar();
+				break;
+			case 4:
+				contieneValor();
+				break;
+			case 5:
+				System.out.println("Gracias por la visita ;)");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("\nIngresa un numero de la lista...");
+				break;
+			}
+		}
+	}
+
     public static void Menu() {
 		StringBuilder str = new StringBuilder();
 		str.append("\n1. Agregar entrada a la tabla\n");
