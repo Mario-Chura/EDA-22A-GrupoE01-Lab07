@@ -72,7 +72,7 @@ La estrutura del presente laboratorio es la siguiente:
 	        ├── Hash.java
 	        ├── Test1.java
 	        ├── Test2.java
-	        └── Readme
+	        └── Readme.md
 
    ```
    
@@ -205,6 +205,185 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
         return result;
 		```
 	- Finalmente el metodo **toString**, implementado para que nos permita retornar todos los elementos de la tabla hash. Haciendo uso de la clase **StringBuilder** de Java que nos permite almacenar cadenas de caracteres de la tabla Hash y poder mostrarlo en consola.
+	
+	- __Ejecuciones__
+		- Test 1:
+	- En esta primera prueba se introdujo los valores directo en el código usando los métodos descritos anteriormente para ello tenemos como entrada lo siguiente:
+	
+		```py
+			System.out.println("¿Cuantos elementos tiene nuestra tabla hash? ==> "+hash.size());
+        		System.out.println("¿Se encuntra vacia la tabla hash? ==> " +  hash.isEmpty());
+        		hash.put("eda", 15);
+        		System.out.println("Ingresamos (eda,15)");
+        		System.out.println("¿Cuantos elementos tiene nuestra tabla hash? ==> "+hash.size());
+        		System.out.println("\n=====Recuperando clave 'eda'========> " + hash.get("eda"));
+        		System.out.println("¿Se encuntra vacia la tabla hash? ==> " +  hash.isEmpty());
+        		System.out.println("¿Se encuentra la clave='eda'? ======> " + hash.containsKey("eda"));
+        		System.out.println("¿Se encuentra el valor='15'? =======> " + hash.containsKey("eda"));
+        		System.out.println("¿Se encuentra el valor='25'? =======> " + hash.containsValue(25));
+        		hash.put("edo", 25);
+        		hash.put("pweba", 29);
+        		hash.put("pdweb", 23);
+        		hash.put("pwrb", 55);
+        		hash.put("pwb", 65);
+        		hash.put("pwed", 55);
+        		hash.put("pwc", 65);
+        		hash.put("pewb", 55);
+        		hash.put("pwba", 65);
+		```
+		
+	- Como resultado en consola tenemos lo siguiente:
+	
+		```py
+			¿Cuantos elementos tiene nuestra tabla hash? ==> 0
+			¿Se encuntra vacia la tabla hash? ==> true
+			Ingresamos (eda,15)
+			¿Cuantos elementos tiene nuestra tabla hash? ==> 1
+
+			=====Recuperando clave 'eda'========> 15
+			¿Se encuntra vacia la tabla hash? ==> false
+			¿Se encuentra la clave='eda'? ======> true
+			¿Se encuentra el valor='15'? =======> true
+			¿Se encuentra el valor='25'? =======> false
+			Hash = {
+			Tamaño=10
+			Longitud=11
+			CodigoHash=7314896
+			Elementos= {
+				[<key=pwb, value=65>, <key=pwrb, value=55>, <key=pdweb, value=23>]
+				[<key=pwc, value=65>, <key=pweba, value=29>]
+				[<key=eda, value=15>]
+				[<key=pewb, value=55>, <key=pwed, value=55>]
+				[<key=edo, value=25>]
+				[<key=pwba, value=65>]
+				}
+			}
+
+			Tamaño de la tabla hash =======> 10
+
+			¿Remueve el clave='pdweb'? =======> 23
+			Hash = {
+				Tamaño=9
+				Longitud=11
+				CodigoHash=7314896
+				Elementos= {
+					[<key=pwb, value=65>, <key=pwrb, value=55>]
+					[<key=pwc, value=65>, <key=pweba, value=29>]
+					[<key=eda, value=15>]
+					[<key=pewb, value=55>, <key=pwed, value=55>]
+					[<key=edo, value=25>]
+					[<key=pwba, value=65>]
+				}
+			}
+
+			Tamaño de la tabla hash =======> 9
+
+			=====Recuperando clave 'pwba'========> 65
+			Tamaño de la tabla hash =======> 9
+		```
+		- Test 2:
+	- En la segunda prueba los valores se introducen por consola, para ello se hiso un menú en el cual se selecciona la operación que deseamos realizar:
+	
+		```py
+			=====> MENU PRINCIPAL <=====
+
+			1. Agregar entrada a la tabla
+			2. Borrar entrada de la tabla
+			3. Mostrar informacion de la tabla
+			4. Contiene clave/valor
+			5. Salir
+			Escoge una opcion: 
+		```
+	- Se agregaron las siguientes claves y valores con la opción 1:
+	
+		```py
+			<edo, 25> Si fue agregado
+			<pfeba, 36> Si fue agregado
+			<pdweb, 153> Si fue agregado
+			<pwrb, 55> Si fue agregado
+			<peb, 75> Si fue agregado
+			<pfc, 15> Si fue agregado
+			<pfc, 15> Si fue agregado
+			<pwba, 56> Si fue agregado
+			<eda, 25> Si fue agregado
+		```
+	- La opción 3 nos muestra la tabla hash:
+	
+		```py
+
+			Hash = {
+				Tamaño=9
+				Longitud=11
+				CodigoHash=117401206
+				Elementos= {
+					[<key=pwrb, value=55>, <key=pdweb, value=153>]
+					[<key=rewb, value=55>]
+				[<key=pfc, value=15>]
+				[<key=peb, value=75>]
+				[<key=eda, value=25>]
+				[<key=pfeba, value=36>]
+				[<key=edo, value=25>]
+				[<key=pwba, value=56>]
+				}
+			}
+		```
+	- La opción 2 nos permite borrar:
+	
+		```py
+
+			1. Agregar entrada a la tabla
+			2. Borrar entrada de la tabla
+			3. Mostrar informacion de la tabla
+			4. Contiene clave/valor
+			5. Salir
+			Escoge una opcion: 2
+
+			Ingresa la clave: pdweb
+			La entrada <pdweb, 153> se borro de la tabla
+			
+			Resultado:
+			
+			Hash = {
+				Tamaño=8
+				Longitud=11
+				CodigoHash=117401206
+				Elementos= {
+					[<key=pwrb, value=55>]
+					[<key=rewb, value=55>]
+					[<key=pfc, value=15>]
+					[<key=peb, value=75>]
+					[<key=eda, value=25>]
+					[<key=pfeba, value=36>]
+					[<key=edo, value=25>]
+					[<key=pwba, value=56>]
+				}
+			}
+		```
+	- La opción 4 nos permite ver si tenemos la clave:
+		```py
+
+			1. Agregar entrada a la tabla
+			2. Borrar entrada de la tabla
+			3. Mostrar informacion de la tabla
+			4. Contiene clave/valor
+			5. Salir
+			Escoge una opcion: 4
+
+			Escoge una opcion
+				1. ¿Contiene la clave?
+				2. ¿Contiene el valor?
+				3. Atras
+			Ingresa una opcion: : 1
+
+			Ingresa la clave: pwrb
+			La tabla SI contiene la clave: pwrb
+			1. ¿Contiene la clave?
+			2. ¿Contiene el valor?
+			3. Atras
+			Ingresa una opcion: : 2
+			Ingresa el valor a buscar (entero): : 156
+			La tabla NO contiene el valor: 156
+		```
 #
 
 ### II.	SOLUCIÓN DEL CUESTIONARIO
@@ -216,9 +395,9 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
 # 
 - El uso de la estructura Hash, nos permite resolver problemas con estructuras de simbolos porque permite la insecion y operaciones de Busqueda. Asimismo otro aplicacion de hash muy usada es en los videojuegos donde se requiere de un registro de las posiciones del jugador, usando esta estructura se logra guardar la posicion y mediante una funcion Hash almacenar su movimiento en una posicion, evitando problemas de que se repita una posicion ya ocupada. Es por estas y otras aplicaciones que es importante el estudio y practica de la Estructura Hash<br>  
 - Una tabla hash tiene como principal ventaja que el acceso a los datos suele ser muy rápido si su razón de ocupación no es muy elevada porque si la ocupación es elevada se producen varias colisiones y la tabla se vuelve muy ineficiente, es por ello que debemos implementar una función que distribuya uniformemente las claves.  <br>
-- Conclusion 3 <br>
-- Conclusion 4 <br>
-- Conclusion 5 <br>
+-  Las tablas hashing constituyen un TAD especialmente indicado para la manipulación y almacenamiento de la información en memoria secundaria. <br>
+- La idea básica de las tablas hash consiste en transformar las claves en direcciones de memoria mediante una función de transformación. <br>
+
 #
 <div align="center"><h2>  RETROALIMENTACIÓN GENERAL </h2></div> <br>
 
@@ -227,4 +406,4 @@ haciendo uso de un *forEach* donde se convierte a *null* los valores del arreglo
 -   https://sites.google.com/a/espe.edu.ec/programacion-ii/home/tablas-hash
 -   https://www.geeksforgeeks.org/hashtable-in-java/
 -   Weiss, M.A.(1998). Data structures and problem solving using Java. Obtenido de https://drive.google.com/file/d/1qHBLI76NkcFd_zOmN_8wUY09mH48wqcU/view
--   4
+-   http://bitybyte.github.io/Hashtables/
